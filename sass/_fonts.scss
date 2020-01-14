@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'NokiaS60';
+  src: 
+  url('../css/fonts/NokiaSansS60.woff') format('woff'),
+  url('../css/fonts/NokiaSansS60.woff2') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; //Браузер будет подгружать стандартные шрифты
+  }
+@font-face {
+  font-family: 'Roboto Light';
+  src: 
+  url('../css/fonts/Roboto-Light.woff') format('woff'),
+  url('../css/fonts/Roboto-Light.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  src: 
+  url('../css/fonts/Roboto-Regular.woff') format('woff'),
+  url('../css/fonts/Roboto-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
