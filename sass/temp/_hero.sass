@@ -1,10 +1,11 @@
 .hero
   height: 100vh
+  max-height: 705px
   padding-top: 5.8571rem
   padding-bottom: 4.7857rem
   background: white url('../img/hero/hero-bg.png') no-repeat
   background-size: cover
-  background-position: -5rem 2rem
+  background-position: -5rem -2rem
   &-container
     margin-top: 2.5rem
   &__content
@@ -23,6 +24,25 @@
         align-items: center
         background: url('../img/hero/hero-item.png') no-repeat center / cover
         border-radius: 50%
+        position: relative
+        &--for-shadow
+          position: relative
+          &::before 
+            content: ''
+            width: 243px
+            height: 152px
+            position: absolute
+            bottom: 0
+            left: -22.5px
+            background: url('../img/hero/shadow.png') no-repeat
+          &::after
+            content: ''
+            width: 177px
+            height: 72px
+            position: absolute
+            bottom: -72px
+            left: 20px
+            background: url('../img/hero/mirror.png') no-repeat
         &__text
           height: 10.2rem 
           max-width: 10.2rem
@@ -41,6 +61,28 @@
       min-width: 301px
       max-width: 301px
       height: 371px
+      z-index: 2
+      position: relative
+      &--for-shadow
+        top: 0
+        left: 0
+        min-width: 301px
+        max-width: 301px
+        height: 371px
+        position: relative
+        z-index: 1
+        &::before 
+          content: ''
+          width: 116%
+          height: 20%
+          position: absolute
+          bottom: 0
+          left: -8%
+          background: url('../img/form/shadow.png') no-repeat
+
+          
+
+
 
   &__title
     &__main-title

@@ -504,11 +504,12 @@ template {
 
 .hero {
   height: 100vh;
+  max-height: 705px;
   padding-top: 5.8571rem;
   padding-bottom: 4.7857rem;
   background: white url("../img/hero/hero-bg.png") no-repeat;
   background-size: cover;
-  background-position: -5rem 2rem; }
+  background-position: -5rem -2rem; }
   .hero-container {
     margin-top: 2.5rem; }
   .hero__content {
@@ -534,7 +535,26 @@ template {
         -webkit-box-align: center;
         align-items: center;
         background: url("../img/hero/hero-item.png") no-repeat center/cover;
-        border-radius: 50%; }
+        border-radius: 50%;
+        position: relative; }
+        .hero__content__items__item--for-shadow {
+          position: relative; }
+          .hero__content__items__item--for-shadow::before {
+            content: '';
+            width: 243px;
+            height: 152px;
+            position: absolute;
+            bottom: 0;
+            left: -22.5px;
+            background: url("../img/hero/shadow.png") no-repeat; }
+          .hero__content__items__item--for-shadow::after {
+            content: '';
+            width: 177px;
+            height: 72px;
+            position: absolute;
+            bottom: -72px;
+            left: 20px;
+            background: url("../img/hero/mirror.png") no-repeat; }
         .hero__content__items__item__text {
           height: 10.2rem;
           max-width: 10.2rem;
@@ -554,7 +574,25 @@ template {
     .hero__content__form {
       min-width: 301px;
       max-width: 301px;
-      height: 371px; }
+      height: 371px;
+      z-index: 2;
+      position: relative; }
+      .hero__content__form--for-shadow {
+        top: 0;
+        left: 0;
+        min-width: 301px;
+        max-width: 301px;
+        height: 371px;
+        position: relative;
+        z-index: 1; }
+        .hero__content__form--for-shadow::before {
+          content: '';
+          width: 116%;
+          height: 20%;
+          position: absolute;
+          bottom: 0;
+          left: -8%;
+          background: url("../img/form/shadow.png") no-repeat; }
   .hero__title__main-title {
     margin: auto;
     text-align: center;
@@ -633,7 +671,20 @@ template {
   .form__input:last-of-type {
     margin-bottom: 14px; }
   .form__input-name {
-    background: white url(../img/form/man.svg) no-repeat right; }
+    background: white url(../img/form/man.svg) no-repeat right;
+    background-size: 8%;
+    background-position: 95% 50%;
+    padding: 10px 40px 10px 15px; }
+  .form__input-email {
+    background: white url(../img/form/mail.svg) no-repeat right;
+    background-size: 8%;
+    background-position: 95% 50%;
+    padding: 10px 40px 10px 15px; }
+  .form__input-phone {
+    background: white url(../img/form/phone.svg) no-repeat right;
+    background-size: 8%;
+    background-position: 95% 50%;
+    padding: 10px 40px 10px 15px; }
 
 .form__button {
   width: 251px;
