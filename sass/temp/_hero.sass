@@ -1,0 +1,71 @@
+.hero
+  height: 100vh
+  padding-top: 5.8571rem
+  padding-bottom: 4.7857rem
+  background: white url('../img/hero/hero-bg.png') no-repeat
+  background-size: cover
+  background-position: -5rem 2rem
+  &-container
+    margin-top: 2.5rem
+  &__content
+    display: flex
+    justify-content: space-between
+    &__items
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      width: 650px
+      &__item
+        width: 198px
+        height: 198px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: url('../img/hero/hero-item.png') no-repeat center / cover
+        border-radius: 50%
+        &__text
+          height: 10.2rem 
+          max-width: 10.2rem
+          display: flex
+          align-items: center
+          color: #272727
+          font-family: 'Roboto Condensed'
+          font-size: 1.1428rem
+          font-weight: bold
+          line-height: 1.3285rem
+          text-transform: uppercase
+          text-align: center
+          background: #fdf1cf
+          border-radius: 50%
+    &__form
+      min-width: 301px
+      max-width: 301px
+      height: 371px
+
+  &__title
+    &__main-title
+      margin: auto
+      text-align: center
+      color: #7d3803
+      font-family: 'Roboto Condensed', sans-serif
+      font-size: 3.2857rem
+      text-transform: uppercase
+      line-height: 3.1428rem
+    &__subtitle
+      margin: auto
+      margin-bottom: 1.5rem
+      text-align: center
+      color: #272727
+      font-family: 'Roboto Condensed', sans-seri
+      font-size: 1.5714rem
+      font-weight: bold
+      text-transform: uppercase
+      line-height: 3.2rem
+
+@media screen and ( max-width:  768px)
+  .hero
+    background: white 
+
+@media screen and ( max-width:  350px)
+  .hero
+    padding-top: 5rem
