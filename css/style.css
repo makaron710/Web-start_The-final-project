@@ -1056,3 +1056,105 @@ div .swiper-container-horizontal > .swiper-pagination-bullets {
       min-width: 290px; }
   .advant-imgage {
     min-width: 25%; } }
+
+.products {
+  background: #ffffff;
+  padding-top: 4.5rem;
+  padding-bottom: 2.5714rem; }
+  .products-container {
+    max-width: 1035px; }
+  .products-title {
+    margin-bottom: 1.7857rem; }
+  .products__content {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between; }
+    .products__content__product {
+      flex-basis: 33.33333%;
+      min-width: 290px;
+      max-width: 339px;
+      padding: 0px 10px 24px 10px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      align-items: center; }
+      .products__content__product:hover {
+        box-shadow: inset 0px 0px 0px 1px #d6d6d6; }
+
+.product-img {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  bottom: 0.7857rem;
+  width: 100%;
+  height: 38%;
+  overflow: hidden;
+  margin-bottom: -14px; }
+
+.product-description__title, .product-description__text {
+  color: #1b1b1b;
+  font-family: Roboto;
+  line-height: 1.5rem;
+  text-align: center; }
+
+.product-description__title {
+  font-size: 1.2857rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px; }
+
+.product-description__text {
+  font-size: 1.1194rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 3px;
+  max-height: 105px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical; }
+
+.product-button {
+  background: #ffffff;
+  color: #e64132;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  width: 151px;
+  height: 41px;
+  border: 1px solid #e64132;
+  -webkit-transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s; }
+  .product-button:hover {
+    background: #e64132;
+    color: #ffffff; }
+
+@media screen and (max-width: 991px) {
+  .products__content {
+    justify-content: space-around; }
+    .products__content__product {
+      flex-basis: 50%; }
+      .products__content__product:hover {
+        box-shadow: none; }
+  .product-button:hover {
+    background: #ffffff;
+    color: #e64132; } }
+
+@media screen and (max-width: 767px) {
+  .products__content {
+    -webkit-box-pack: center;
+    justify-content: center; }
+    .products__content__product {
+      flex-basis: 100%; } }

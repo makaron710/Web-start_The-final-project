@@ -142,13 +142,26 @@ $(document).ready(function(){
   var slideContainer = $('.slider-container');
   slideContainer.css('height', slideContainer.width()*0.59);
 
-    // Пропорциональный размер видео "Главные преимущества"
-    var videoContainer = $('.video-container');
-    videoContainer.css('height', videoContainer.width()*0.6377);
+  // Пропорциональный размер видео "Главные преимущества"
+  var videoContainer = $('.video-container');
+  videoContainer.css('height', videoContainer.width()*0.6377);
 
-    // Пропорциональный размер видео "Главные преимущества тень"
-    var videoContainerSh = $('.main-advant__content__video--for-shadow');
-    videoContainerSh.css('height', videoContainerSh.width()*0.6377);
+  // Пропорциональный размер видео "Главные преимущества тень"
+  var videoContainerSh = $('.main-advant__content__video--for-shadow');
+  videoContainerSh.css('height', videoContainerSh.width()*0.6377);
+
+/*   // Высота product-description__text
+  var productText = $('.product-description__text');
+  var maxHight = 0
+  productText.each(function () {
+    var productTextWidth = productText.height();
+    if(productTextWidth > 0) {
+      maxHight = productTextWidth;
+    }
+    productText.height(maxHight);
+  }); */
+/*   productText.height(maxHight); */
+
 
 
 // Иинициализация wow

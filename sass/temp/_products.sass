@@ -1,0 +1,95 @@
+.products
+  background: #ffffff
+  padding-top: 4.5rem
+  padding-bottom: 2.5714rem
+  &-container
+    max-width: 1035px
+  &-title
+    margin-bottom: 1.7857rem
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__product
+      flex-basis: (100%) / 3
+      min-width: 290px
+      max-width: 339px
+      padding: 0px 10px 24px 10px
+      display: flex
+      flex-direction: column
+      justify-content: space-around  
+      align-items: center
+      &:hover
+        box-shadow: inset 0px 0px 0px 1px rgba(214,214,214,1)
+
+.product
+  &-img
+    display: flex
+    justify-content: center
+    align-items: center
+    bottom: 0.7857rem
+    width: 100%
+    height: 38%
+    overflow: hidden
+    margin-bottom: -14px
+  &-description
+    &__title, &__text
+      color: #1b1b1b
+      font-family: Roboto
+      line-height: 1.5rem
+      text-align: center
+    &__title
+      font-size: 1.2857rem
+      font-weight: bold
+      text-transform: uppercase
+      margin: 5px
+    &__text
+      font-size: 1.1194rem
+      font-weight: 300
+      margin-top: 0
+      margin-bottom: 3px
+      max-height: 105px
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 5
+      -webkit-box-orient: vertical
+      
+  &-button
+    background: #ffffff
+    color: #e64132
+    font-family: Roboto
+    font-size: 1rem
+    font-weight: bold
+    line-height: 1.5rem
+    text-transform: uppercase
+    width: 151px
+    height: 41px
+    border: 1px solid #e64132
+    transition: background 0.3s, color 0.3s
+    &:hover
+      background: #e64132
+      color: #ffffff
+
+@media screen and ( max-width: 991px )
+  .products
+    &__content
+      justify-content: space-around
+      &__product
+        flex-basis: 50%
+        &:hover
+          box-shadow: none
+  .product
+    &-button
+      &:hover
+        background: #ffffff
+        color: #e64132
+
+@media screen and ( max-width:  767px)
+  .products
+    &__content
+      justify-content: center
+      &__product
+        flex-basis: 100%
+  
+  
