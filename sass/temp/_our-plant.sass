@@ -1,0 +1,61 @@
+.our-plant
+  background: #fff9e6 url('../img/our-plant/our-plant-bg.png') no-repeat
+  background-position: top center
+  background-attachment: local
+  padding-top: 3.2286rem
+  padding-bottom: 4.1429rem
+  &__content
+    display: flex
+    justify-content: space-between
+    &__slider-container
+      width: 566px
+      max-width: 566px
+      background-color: tomato
+      overflow: hidden
+    &__text-block
+      max-width: 27rem
+      color: #1b1b1b
+      font-family: Roboto
+      font-size: 1.1rem
+      font-weight: 300
+      line-height: 1.6429rem
+      padding-top: 15px
+      &__text
+        margin-bottom: 25px
+
+@media screen and ( max-width:  991px)
+  .our-plant
+    &__content
+      flex-direction: column
+      &__slider-container
+        margin: auto
+      &__text-block
+        margin: auto
+        max-width: 50%
+        &__text
+          text-align: center
+  .section
+    &-title
+      &::after
+        margin: auto
+
+@media screen and ( max-width:  767px)
+  .our-plant
+    background: #fff9e6
+    &__content
+      &__slider-container
+        width: 100%
+        img
+
+      &__text-block
+        max-width: 70%
+
+@media screen and ( max-width:  575px)
+  .our-plant
+    &__content
+      &__slider-container
+        img
+
+      &__text-block
+        max-width: 90%
+  
