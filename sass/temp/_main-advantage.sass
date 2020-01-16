@@ -1,0 +1,56 @@
+.main-advant
+  padding-top: 3.7857rem
+  padding-bottom: 4.5rem
+  background: white url('../img/main-advantage/main-advantage-bg.png') no-repeat
+  background-position: top center
+  background-attachment: local
+  &__title
+    margin-bottom: 3.5rem
+  &__content
+    display: flex
+    justify-content: flex-end
+    &__video
+      background: url('../img/main-advantage/player-plug.png') no-repeat center / cover
+      width: 621px
+      max-width: 100%
+      border-radius: 7px
+      z-index: 2
+      position: relative
+      display: flex
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: rgba(black, 0.7)
+        border-radius: 7px
+      &__play
+        position: relative
+        width: 6.8%
+        margin: auto
+        cursor: pointer
+      &--for-shadow
+        top: 0
+        left: 0
+        width: 621px
+        max-width: 100%
+        position: relative
+        z-index: 1
+        &::before 
+          content: ''
+          width: 109%
+          height: 20%
+          position: absolute
+          bottom: 0
+          left: -4.5%
+          background: url('../img/main-advantage/shadow.png') no-repeat
+
+@media screen and ( max-width:  767px)
+  .main-advant
+    background: white
+    &__content
+      justify-content: center
+  .section
+    &-title
+      &::after
+        margin: auto
