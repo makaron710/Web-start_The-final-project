@@ -67,7 +67,7 @@ img {
 
 @media screen and (max-width: 575px) {
   .section-title::after {
-    left: 45%; } }
+    display: none; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -928,7 +928,7 @@ div .swiper-container-horizontal > .swiper-pagination-bullets {
   padding-top: 3.7857rem;
   padding-bottom: 4.5rem;
   background: white url("../img/main-advantage/main-advantage-bg.png") no-repeat;
-  background-position: top center;
+  background-position: bottom center;
   background-attachment: local; }
   .main-advant__title {
     margin-bottom: 3.5rem; }
@@ -982,3 +982,77 @@ div .swiper-container-horizontal > .swiper-pagination-bullets {
       justify-content: center; }
   .section-title::after {
     margin: auto; } }
+
+.our-advant {
+  background: #fff9e6;
+  padding-top: 4.2143rem;
+  padding-bottom: 4.0714rem; }
+  .our-advant-title {
+    margin-bottom: 1.8142rem; }
+  .our-advant__content {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between; }
+    .our-advant__content__advant {
+      display: -webkit-box;
+      display: flex;
+      flex-basis: 48%;
+      margin-bottom: -0.6rem; }
+
+.advant-descriprion {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column; }
+  .advant-descriprion__title, .advant-descriprion__text {
+    color: #1b1b1b;
+    font-family: Roboto;
+    line-height: 1.5rem; }
+  .advant-descriprion__title {
+    font-size: 1.2857rem;
+    font-weight: bold;
+    margin-bottom: -0.7rem; }
+  .advant-descriprion__text {
+    font-size: 1.0614rem;
+    font-weight: 300; }
+
+.advant-img {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 22px; }
+
+.advant-imgage {
+  min-width: 7rem;
+  min-height: 7rem; }
+
+@media screen and (max-width: 767px) {
+  .our-advant__content__advant {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-bottom: 10px; }
+  .advant-img {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0; }
+  .advant-descriprion__title, .advant-descriprion__text {
+    text-align: center; }
+  .advant-descriprion__title {
+    margin-top: 5px; } }
+
+@media screen and (max-width: 575px) {
+  .our-advant__content {
+    -webkit-box-pack: center;
+    justify-content: center; }
+    .our-advant__content__advant {
+      flex-basis: 60%;
+      min-width: 290px; }
+  .advant-imgage {
+    min-width: 25%; } }

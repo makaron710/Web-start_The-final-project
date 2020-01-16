@@ -140,9 +140,15 @@ $(document).ready(function(){
 
   // Пропорциональный размер слайдера
   var slideContainer = $('.slider-container');
-
   slideContainer.css('height', slideContainer.width()*0.59);
 
+    // Пропорциональный размер видео "Главные преимущества"
+    var videoContainer = $('.video-container');
+    videoContainer.css('height', videoContainer.width()*0.6377);
+
+    // Пропорциональный размер видео "Главные преимущества тень"
+    var videoContainerSh = $('.main-advant__content__video--for-shadow');
+    videoContainerSh.css('height', videoContainerSh.width()*0.6377);
 
 
 // Иинициализация wow
@@ -303,9 +309,8 @@ function init(){
 var player;
 $('.video__play').on('click', function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '450',
     width: '100%',
-    videoId: 'cD0qpac2gqw',
+    videoId: 'vaJN0KhzuUs',
     events: {
       'onReady': videoPlay
     }

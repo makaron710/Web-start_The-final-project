@@ -1,0 +1,70 @@
+.our-advant
+  background: #fff9e6
+  padding-top: 4.2143rem
+  padding-bottom: 4.0714rem
+  &-title
+    margin-bottom: 1.8142rem
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__advant
+      display: flex
+      flex-basis: 48%
+      margin-bottom: -0.6rem
+
+.advant-descriprion 
+  display: flex
+  flex-direction: column
+  &__title, &__text
+    color: #1b1b1b
+    font-family: Roboto
+    line-height: 1.5rem
+  &__title
+    font-size: 1.2857rem
+    font-weight: bold
+    margin-bottom: -0.7rem
+  &__text
+    font-size: 1.0614rem
+    font-weight: 300
+
+.advant
+  &-img
+    display: flex
+    align-items: center
+    margin-right: 22px
+  &-imgage
+    min-width: 7rem
+    min-height: 7rem
+
+@media screen and ( max-width:  767px)
+  .our-advant
+    &__content
+      &__advant
+        flex-direction: column
+        margin-bottom: 10px
+  .advant
+    &-img
+      display: flex
+      justify-content: center
+      margin: 0
+    &-descriprion 
+      &__title, &__text
+        text-align: center
+      &__title
+        margin-top: 5px
+
+@media screen and ( max-width:  575px)
+  .our-advant
+    &__content
+      justify-content: center
+      &__advant
+        flex-basis: 60%
+        min-width: 290px
+
+  .advant
+    &-imgage
+      min-width: 25%
+
+
+
