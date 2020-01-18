@@ -117,6 +117,7 @@ $(document).ready(function(){
       prevEl: '.swiper-button-prev',
     },
   })
+
 // Позиционирование стрелок слайдера
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
@@ -126,21 +127,32 @@ $(document).ready(function(){
   var wind = $(window);
   var colSliders = 5 // Количество слайдеров
 
-/*   bullets.css('left', prev.width()+8);
-  next.css('left', prev.width()+8+bullets.width()); */
-
-  prev.css('left', (container.width()-prev.width()-3.4-bullets.width()-next.width())/2+3.4+7+prev.width());
-  bullets.css('left', (container.width()-prev.width()-3.4-bullets.width()-next.width())/2+prev.width()+3.4);
-  next.css('left', ((container.width()-prev.width()-3.4-bullets.width()-next.width())/2)+3.4+bullets.width()-7);
+  $('.swiper-pagination').each( function() {
+    $(this).css('left', (($(this).parent().width()-$(this).width())/2));
+  });
 
   if (wind.width() <= 575) {
     prev.css('left', 5);
-    next.css('left', container.width()-next.width()-5);
+    next.css('right', 5);
+    $('.about .swiper-button-prev').css('top', ($('.slider-container-about .swiper-slide').width()*0.637/2));
+    $('.about .swiper-button-next').css('top', ($('.slider-container-about .swiper-slide').width()*0.637/2));
+  }
+  else {
+    $('.swiper-button-prev').each( function() {
+      $(this).css('margin-left', ($(this).parent().width()-prev.width()-3.4-bullets.width()-next.width())/2+7);
+    });
+  
+    $('.swiper-button-next').each( function() {
+      $(this).css('margin-right', ($(this).parent().width()-prev.width()-3.4-bullets.width()-next.width())/2+7);
+    });
   }
 
   // Пропорциональный размер слайдера
-  var slideContainer = $('.slider-container');
-  slideContainer.css('height', slideContainer.width()*0.59);
+  $('.slider-container').css('height', $('.slider-container').width()*0.59);
+
+  $('.slider-container-about .swiper-slide').css('height', $('.slider-container-about .swiper-slide').width()*0.637);
+
+  $('.slider-container-about').css('height', $('.slider-container-about').width()*0.637+43);
 
   // Пропорциональный размер видео "Главные преимущества"
   var videoContainer = $('.video-container');
@@ -333,3 +345,83 @@ function videoPlay(event) {
   event.target.playVideo();
 }
 
+//11111111111111111111111111111
+var player;
+$('.video__play-1').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player-1', {
+    width: '100%',
+    videoId: 'vaJN0KhzuUs',
+    events: {
+      'onReady': videoPlay
+    }
+  });
+})
+function videoPlay(event) {
+  event.target.playVideo();
+}
+//22222222222222222222222222222
+var player;
+$('.video__play-2').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player-2', {
+    width: '100%',
+    videoId: 'LG0mip85vrI',
+    events: {
+      'onReady': videoPlay
+    }
+  });
+})
+function videoPlay(event) {
+  event.target.playVideo();
+}
+//333333333333333333333333333
+var player;
+$('.video__play-3').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player-3', {
+    width: '100%',
+    height: '100%',
+    videoId: '54S7CMbo0bo',
+    events: {
+      'onReady': videoPlay
+    }
+  });
+})
+function videoPlay(event) {
+  event.target.playVideo();
+}
+//44444444444444444444444444444
+var player;
+$('.video__play-4').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player-4', {
+    width: '100%',
+    videoId: 'FGMiF0kwh5M',
+    events: {
+      'onReady': videoPlay
+    }
+  });
+})
+function videoPlay(event) {
+  event.target.playVideo();
+}
+//555555555555555555555555555
+var player;
+$('.video__play-5').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player-5', {
+    width: '100%',
+    videoId: '7E0sx40MPwI',
+    events: {
+      'onReady': videoPlay
+    }
+  });
+})
+function videoPlay(event) {
+  event.target.playVideo();
+}
+
+// Автообновление страницы при изменении размера окна на 10%
+var s_win_w = $(window).width();
+$(window).resize(function(){
+  win_w = $(window).width();
+  if (win_w >= s_win_w*1.1 || win_w <= s_win_w*0.9) {
+    location.reload();
+  }
+});

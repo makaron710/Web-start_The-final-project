@@ -1,6 +1,6 @@
 .about
   padding-top: 3.2143rem
-  padding-bottom: 6rem
+  padding-bottom: 2.9rem
   background: #fff9e6 url('../img/about/about-bg.png') no-repeat
   background-position: top 320px center
   background-attachment: local
@@ -22,8 +22,13 @@
       justify-content: center
       align-items: center
       width: 419px
+      max-width: 100%
       margin: auto
       border-radius: 7px
+
+.slider-container-about
+  display: flex
+  align-items: flex-start
 
 .swiper-slide
   &-1, &-2, &-3, &-4, &-5
@@ -49,4 +54,11 @@
     background: url('../img/about/player-plug-4.jpg') no-repeat center / cover
   &-5
     background: url('../img/about/player-plug-5.jpg') no-repeat center / cover
+
+@media screen and ( max-width:  767px)
+  .about
+    background: #fff9e6
+    &__content
+      &__description
+        text-align: center
 

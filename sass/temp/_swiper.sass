@@ -4,6 +4,7 @@
     height: 100%
     display: flex
 
+
 div .swiper-container-horizontal>.swiper-pagination-bullets
   width: 111px
   height: 25px
@@ -47,13 +48,23 @@ div .swiper-container-horizontal>.swiper-pagination-bullets
     width: 7px
     height: 13px
 
+.about .swiper-container .swiper-button
+  &-next, &-prev
+    top: 100.5%
+
+.slider-container-about .swiper-container-horizontal>.swiper-pagination-bullets
+  margin-top: 18px
+
 @media screen and ( max-width: 575px )
+  .our-plant .swiper-container .swiper-button
+    &-next, &-prev
+      top: 50%!important
+
   .swiper-container .swiper-button
     &-next, &-prev
-      top: 50%
       width: 50px!important
       height: 50px!important
-      background: rgba(gray, 0.7)
+      background: rgba(34, 34, 34, 0.7)
       border-radius: 50%
       &::after
         font-size: 30px
@@ -62,4 +73,6 @@ div .swiper-container-horizontal>.swiper-pagination-bullets
 
   div .swiper-container-horizontal>.swiper-pagination-bullets
     width: 90px  
-    
+
+  .slider-container-about .swiper-container-horizontal>.swiper-pagination-bullets
+    margin-top: 0
