@@ -1,85 +1,29 @@
-/* //проверка прогрузки html
-document.addEventListener("DOMContentLoaded", function(event){
-
-  //объект документа с классом modal
-  const modal = document.querySelector('.modal'); 
-  //все объекты документа с селектором data-toggle=modal
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  // объект документа с класссом modal_close
-  const closeBtn = document.querySelector('.modal__close'); 
-  // объект документа с класссом modal__over
-  const closeOver = document.querySelector('.modal__over');
-
-  //функция toggle переключает наличие/отсутствие класса
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
-  //для каждого modalBtn отслеживать элементы с событием "клик"
-  //при наступлении вызвать функццию switchModal чтобы открыть окно
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-  
-  // при клике по объекту closeBtn вызвать функццию switchModal чтобы закрыть окно
-  closeBtn.addEventListener('click', switchModal);
-
-  // при клике по объекту closeBtn вызвать функццию switchModal чтобы закрыть окно
-  closeOver.addEventListener('click', switchModal);
-
-  // при нажатии клавиши escape, открытие/закрытие вызов функции switchModal
-  document.addEventListener('keydown', (event) => {
-    if (event.keyCode == 27) {
-      modal.classList.toggle('modal--visible');
-    }
-  });
-}); */
-
 //jQuery
 //проверка прогрузки html
 $(document).ready(function(){
 
-  //объект документа с классом modal
-  var modal = $('.modal'),
-  //все объекты документа с селектором data-toggle=modal
-      modalBtn = $('[data-toggle=modal]'),
-  // объект документа с класссом modal_close
-      closeBtn = $('.modal__close'),
-  // объект документа с класссом modal__over
-      closeOver = $('.modal__over');
+  /* -----СОБЫТИЯ----- */
 
-  //функция toggle переключает наличие/отсутствие класса
-    var switchModal = () => {
-    modal.toggleClass('modal--visible');
-  };
-
-  //для modalBtn отслеживать событие "клик"
-  //при наступлении вызвать функццию switchModal чтобы открыть окно
-  modalBtn.on('click', switchModal);
+  // при клике на .call-me__button добавляется класс .visible
+  $('.call-me__button').on('click', () => {
+    $('.modal-call-back-me').addClass('visible');
+  });
   
-  // при клике по объекту closeBtn вызвать функццию switchModal чтобы закрыть окно
-  closeBtn.on('click', () => {
-    $('.modal').removeClass('modal--visible modal-thank--visible');
+  // при клике по объекту .close-button удаление класса .visible чтобы закрыть окно
+  $('.close-button').on('click', () => {
+    $('.modal').removeClass('visible');
   });
 
-  // при клике по объекту closeBtn вызвать функццию switchModal чтобы закрыть окно
-  closeOver.on('click', () => {
-    $('.modal').removeClass('modal--visible modal-thank--visible');
+  // при клике по объекту .for-close, удаление класса, чтобы закрыть окно
+  $('.for-close').on('click', () => {
+    $('.modal').removeClass('visible');
   });
 
-  // при нажатии клавиши escape - удаление класса .modal--visible
+  // при нажатии клавиши escape - удаление класса .visible
   $(document).keyup(function(e) {
     if (e.key === "Escape" || e.keyCode === 27) {
-      modal.removeClass('modal--visible');
+      $('.modal').removeClass('visible');
     }
-  });
-
-  // Кнопка "Листайте вниз"
-  $(() => {
-    $('.hero__scroll-down').click(() => {
-			$('html').animate({
-				scrollTop:$('#section-projects').offset().top+50
-			}, 500);
-    });
   });
 
   // кнопка прокрутки вверх
@@ -99,9 +43,31 @@ $(document).ready(function(){
 				scrollTop:0
 			}, 500);
     });
-    
+   
   });
+
+
+  // Модальное окно описания продукции
+/*     $('.product-button-2').on('click', () => {        
+      var zn = $('.product-button-2').parent().html();
+      $('.modal-product').addClass('visible');
+      $('.modal-product__form-container').html(zn);
+    }); */
+
+
+  var arr = [".product-button-1", ".product-button-2", ".product-button-3", ".product-button-4", ".product-button-5", ".product-button-6"];
+  arr.forEach(function(arrg) {
+    $(arrg).on('click', () => {        
+      var zn = $(arrg).parent().html();
+      $('.modal-product').addClass('visible');
+      $('.modal-product__form-container').html(zn);
+    });
+  });
+
+  /* -----/.СОБЫТИЯ----- */
   
+
+  /* -----НАСТРОЙКА СЛАЙДЕРА----- */
 
   //initialize swiper when document ready
   var mySwiper = new Swiper ('.swiper-container', {
@@ -149,10 +115,13 @@ $(document).ready(function(){
 
   // Пропорциональный размер слайдера
   $('.slider-container').css('height', $('.slider-container').width()*0.59);
-
   $('.slider-container-about .swiper-slide').css('height', $('.slider-container-about .swiper-slide').width()*0.637);
-
   $('.slider-container-about').css('height', $('.slider-container-about').width()*0.637+43);
+
+  /* -----/.НАСТРОЙКА СЛАЙДЕРА----- */
+
+
+  /* -----РАЗМЕРЫ----- */
 
   // Пропорциональный размер видео "Главные преимущества"
   var videoContainer = $('.video-container');
@@ -170,6 +139,8 @@ $(document).ready(function(){
   // Пропорциональный размер карты
 /*   $('.map').height($('.map').width()*0.29); */
 
+/* -----./РАЗМЕРЫ----- */
+
 
 // Иинициализация wow
   new WOW().init();
@@ -180,14 +151,7 @@ $(document).ready(function(){
     $(this).validate({
       // Класс, который будет присваиваться для элементов (полей) с ошибкой
       errorClass: "invalid",
-      //onclick: false,
-      // Error label устанавливается у соответствующего label
-/*       errorLabelContainer: ".label-error",
-      wrapper: "label",
-      submitHandler: function() { alert("Submitted!") }, */
-/*       errorPlacement: function(error, element) {
-        error.appendTo("label");
-      }, */
+
       errorPlacement: function (error, element) {
         if (element.attr("type") == "checkbox") {
             return element.next('label').append(error);
@@ -260,8 +224,9 @@ $(document).ready(function(){
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
   $('[type=telTextHold]').mask('+7(000) 000-00-00');
 
-// End
 });
+// ./READY END ----------
+
 
 // отложенная загрузка яндекс карты
 setTimeout(function(){
