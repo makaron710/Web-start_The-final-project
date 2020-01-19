@@ -48,13 +48,6 @@ $(document).ready(function(){
 
 
   // Модальное окно описания продукции
-/*     $('.product-button-2').on('click', () => {        
-      var zn = $('.product-button-2').parent().html();
-      $('.modal-product').addClass('visible');
-      $('.modal-product__form-container').html(zn);
-    }); */
-
-
   var arr = [".product-button-1", ".product-button-2", ".product-button-3", ".product-button-4", ".product-button-5", ".product-button-6"];
   arr.forEach(function(arrg) {
     $(arrg).on('click', () => {        
@@ -147,18 +140,18 @@ $(document).ready(function(){
 
   
 // Валидация формы
-  $('.form').each( function validateForm() {
+  $('#hero-form').each( function validateForm() {
     $(this).validate({
       // Класс, который будет присваиваться для элементов (полей) с ошибкой
       errorClass: "invalid",
 
-      errorPlacement: function (error, element) {
+/*       errorPlacement: function (error, element) {
         if (element.attr("type") == "checkbox") {
             return element.next('label').append(error);
         }
     
          error.insertAfter($(element));
-    },
+    }, */
 
       // Правила
       rules: {
@@ -177,9 +170,7 @@ $(document).ready(function(){
           required: true,
           email: true
         },
-        policyCheckbox: {
-          required: true
-        }
+
       }, 
       // сообщения
       messages: {
@@ -193,12 +184,10 @@ $(document).ready(function(){
           required: "* Заполните поле",
           email: "* Введите корректный email"
         },
-        policyCheckbox: {
-          required: "* Поставте галочку"
-        }
+
       },
 
-      submitHandler:
+/*       submitHandler:
       function (form) {
         $.ajax({
           type: 'POST',
@@ -216,13 +205,13 @@ $(document).ready(function(){
           
         });
         return false; 
-      }
+      } */
     });
   });
 
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
-  $('[type=telTextHold]').mask('+7(000) 000-00-00');
+ 
 
 });
 // ./READY END ----------

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="sharov maxim">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -92,18 +91,18 @@
                 </div>            
                 <!-- /.form-container__title-block -->
 
-                <form action="" class="from">
+                <form action="#" id="hero-form" class="form hero-form">
 
                   <div class="form__inputs-block">
-                    <input type="text" class="form__input form__input-name" placeholder="Ваше имя">
-                    <input type="email" class="form__input form__input-email" placeholder="Ваш e-mail">
-                    <input type="tel" class="form__input form__input-phone" placeholder="Ваш номер телефона">
+                    <input type="text" name="userName" class="form__input form__input-name" id="hero-user-name" placeholder="Ваше имя">
+                    <input type="email" name="userEmail" class="form__input form__input-email" id="hero-user-email" placeholder="Ваш e-mail">
+                    <input type="tel" name="userPhone" class="form__input form__input-phone" id="hero-user-phone" placeholder="Ваш номер телефона">
                   </div>
 
                   <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить КП!</span></button>
 
                 </form>
-                <!-- /.from -->
+                <!-- /.form -->
 
                 <div class="form-container__safe-info">
                   <span class="form-container__safe-info__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</span>
@@ -485,18 +484,18 @@
           <!-- FORM CONTAINER -->
           <div class="form-container personal-offer__form-container">
 
-            <form action="" class="from personal-offer__form-container__form">
+            <form action="#" method="POST" id="personal-offer-form"  class="form personal-offer__form-container__form">
 
               <div class="form__inputs-block personal-offer__form-container__form__inputs-block">
-                <input type="text" class="form__input form__input-name" placeholder="Ваше имя">
-                <input type="email" class="form__input form__input-email" placeholder="Ваш e-mail">
-                <input type="tel" class="form__input form__input-phone" placeholder="Ваш номер телефона">
+                <input type="text" name="userName" class="form__input form__input-name" id="personal-offer-user-name" placeholder="Ваше имя">
+                <input type="email" name="userEmail" class="form__input form__input-email" id="personal-offer-user-email" placeholder="Ваш e-mail">
+                <input type="tel" name="userPhone" class="form__input form__input-phone" id="personal-offer-user-phone" placeholder="Ваш номер телефона">
               </div>
 
               <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить сейчас!</span></button>
 
             </form>
-            <!-- /.from -->
+            <!-- /.form -->
 
             <div class="form-container__safe-info">
               <span class="form-container__safe-info__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</span>
@@ -546,9 +545,9 @@
           <div class="footer-contacts__container__social">
 
             <div id="vk_like"></div>
-            <script type="text/javascript">
+<!--             <script type="text/javascript">
              VK.Widgets.Like('vk_like');
-            </script>
+            </script> -->
 
           </div>
 
@@ -560,11 +559,11 @@
 
     <!-- MODAL-CALL-BACK-ME -->
       <div class="modal modal-call-back-me">
-        <div class="over-modal">
+        <div class="over-modal"><div class="for-close"></div>
           <div class="modal-container">
 
             <div class="modal-container__cloce-button cloce-button">
-              <img src="img/modal/close-button.svg" alt="">
+              <img src="img/modal/close-button.svg" alt="" class="close-button">
             </div>
 
             <!-- FORM CONTAINER -->
@@ -576,18 +575,18 @@
               </div>            
               <!-- /.form-container__title-block -->
 
-              <form action="" class="from">
+              <form action="send.php" method="POST" id="modal-form"  class="form">
 
                 <div class="form__inputs-block">
-                  <input type="text" class="form__input form__input-name" placeholder="Ваше имя">
-                  <input type="email" class="form__input form__input-email" placeholder="Ваш e-mail">
-                  <input type="tel" class="form__input form__input-phone" placeholder="Ваш номер телефона">
+                  <input type="text" name="userName" class="form__input form__input-name" id="modal-user-name" placeholder="Ваше имя">
+                  <input type="email" name="userEmail" class="form__input form__input-email" id="modal-user-email" placeholder="Ваш e-mail">
+                  <input type="tel" name="userPhone" class="form__input form__input-phone" id="modal-user-phone" placeholder="Ваш номер телефона">
                 </div>
 
                 <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить КП!</span></button>
 
               </form>
-              <!-- /.from -->
+              <!-- /.form -->
 
               <div class="form-container__safe-info">
                 <span class="form-container__safe-info__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</span>
@@ -604,7 +603,7 @@
 
   <!-- MODAL-THANK -->
     <div class="modal modal-thank">
-      <div class="over-modal">
+      <div class="over-modal"><div class="for-close"></div>
         <div class="modal-container">
 
           <div class="form-container modal__form">
@@ -615,7 +614,7 @@
           </div>
 
           <div class="modal-container__cloce-button cloce-button">
-            <img src="img/modal/close-button.svg" alt="">
+            <img src="img/modal/close-button.svg" alt="" class="close-button">
           </div>
 
         </div>
@@ -641,14 +640,16 @@
     </div>
   <!-- /.MODAL-PRODUCT-DISCRIPTION -->
 
-   
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>  
+    <script src="js/swiper.min.js"></script>
+    <!-- <script src="https://vk.com/js/api/openapi.js?165" type="text/javascript"></script> -->
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>  
   </body>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>  
-  <script src="js/swiper.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://vk.com/js/api/openapi.js?165" type="text/javascript"></script>
+
 
 </html>
