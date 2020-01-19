@@ -100,7 +100,7 @@
                     <input type="tel" class="form__input form__input-phone" placeholder="Ваш номер телефона">
                   </div>
 
-                  <button class="form__button button"><span class="form__button__text">Получить КП!</span></button>
+                  <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить КП!</span></button>
 
                 </form>
                 <!-- /.from -->
@@ -474,7 +474,91 @@
     </div>
     <!-- /.ABOUT -->
 
-    
+    <!-- GET-A-PRSONAL-OFFER -->
+    <div class="personal-offer section">
+      <div class="container personal-offer-container">
+
+        <h3 class="personal-offer-title section-title">Получите персональное предложение</h3>
+        <!-- /.personal-offer-title section-title -->
+
+        <div class="personal-offer__form">
+          <!-- FORM CONTAINER -->
+          <div class="form-container personal-offer__form-container">
+
+            <form action="" class="from personal-offer__form-container__form">
+
+              <div class="form__inputs-block personal-offer__form-container__form__inputs-block">
+                <input type="text" class="form__input form__input-name" placeholder="Ваше имя">
+                <input type="email" class="form__input form__input-email" placeholder="Ваш e-mail">
+                <input type="tel" class="form__input form__input-phone" placeholder="Ваш номер телефона">
+              </div>
+
+              <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить сейчас!</span></button>
+
+            </form>
+            <!-- /.from -->
+
+            <div class="form-container__safe-info">
+              <span class="form-container__safe-info__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</span>
+            </div>
+            <!-- /.form-container__safe-info -->
+
+          </div>
+          <!-- /.FORM CONTAINER --> 
+        </div>
+        <!-- /.personal-offer__form -->
+
+      </div>
+    </div>
+    <!-- /.GET-A-PRSONAL-OFFER -->
+
+    <!-- BLACK-WHITE-PHOTO -->
+    <div class="black-white-photo section">
+      <div class="photo-block photo-block-1"><img src="img/photogallery/photo-1.jpg" alt="PHOTO" class="bw-photo photo-1"></div>
+      <div class="photo-block photo-block-2"><img src="img/photogallery/photo-2.jpg" alt="PHOTO" class="bw-photo photo-2"></div>
+      <div class="photo-block photo-block-3"><img src="img/photogallery/photo-3.jpg" alt="PHOTO" class="bw-photo photo-3"></div>
+      <div class="photo-block photo-block-4"><img src="img/photogallery/photo-4.jpg" alt="PHOTO" class="bw-photo photo-4"></div>
+      <div class="photo-block photo-block-5"><img src="img/photogallery/photo-5.jpg" alt="PHOTO" class="bw-photo photo-5"></div>
+      <div class="photo-block photo-block-6"><img src="img/photogallery/photo-6.jpg" alt="PHOTO" class="bw-photo photo-6"></div>
+      <div class="photo-block photo-block-7"><img src="img/photogallery/photo-7.jpg" alt="PHOTO" class="bw-photo photo-7"></div>
+      <div class="photo-block photo-block-8"><img src="img/photogallery/photo-8.jpg" alt="PHOTO" class="bw-photo photo-8"></div>
+      <div class="photo-block photo-block-9"><img src="img/photogallery/photo-9.jpg" alt="PHOTO" class="bw-photo photo-9"></div>
+      <div class="photo-block photo-block-10"><img src="img/photogallery/photo-10.jpg" alt="PHOTO" class="bw-photo photo-10"></div>
+      <div class="photo-block photo-block-11"><img src="img/photogallery/photo-11.jpg" alt="PHOTO" class="bw-photo photo-11"></div>
+      <div class="photo-block photo-block-12"><img src="img/photogallery/photo-12.jpg" alt="PHOTO" class="bw-photo photo-12"></div>
+    </div>
+    <!-- /.BLACK-WHITE-PHOTO -->
+
+    <!-- FOOTER -->
+    <footer class="footer section">
+
+      <!-- MAP -->
+      <div class="map">
+        <div id="map"></div>
+        <!-- /.map -->
+      </div>
+      <!-- /.MAP -->
+
+      <div class="footer-contacts">
+        <div class="container footer-contacts__container">
+          <span class="footer-contacts__container__text">© 1994-2014 «Балашиха Хлеб» ,  ИНН: 7708757552,  ОГРН: 1127746150080, Адрес: г. Москва, ул. Неверовского, д. 9</span>
+
+          <div class="footer-contacts__container__social">
+
+            <div id="vk_like"></div>
+            <script type="text/javascript">
+             VK.Widgets.Like('vk_like');
+            </script>
+
+          </div>
+
+        </div>
+      </div>
+
+    </footer>
+    <!-- /.FOOTER -->
+
+   
   </body>
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -482,5 +566,6 @@
   crossorigin="anonymous"></script>  
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://vk.com/js/api/openapi.js?165" type="text/javascript"></script>
 
 </html>

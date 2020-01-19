@@ -161,19 +161,14 @@ $(document).ready(function(){
   // Пропорциональный размер видео "Главные преимущества тень"
   var videoContainerSh = $('.main-advant__content__video--for-shadow');
   videoContainerSh.css('height', videoContainerSh.width()*0.6377);
+  
+  // Пропорциональный размер черно-былых фото
+  $('.photo-block').each( function() {
+    $(this).height($(this).width()*0.62);
+  });
 
-/*   // Высота product-description__text
-  var productText = $('.product-description__text');
-  var maxHight = 0
-  productText.each(function () {
-    var productTextWidth = productText.height();
-    if(productTextWidth > 0) {
-      maxHight = productTextWidth;
-    }
-    productText.height(maxHight);
-  }); */
-/*   productText.height(maxHight); */
-
+  // Пропорциональный размер карты
+/*   $('.map').height($('.map').width()*0.29); */
 
 
 // Иинициализация wow
@@ -284,7 +279,7 @@ setTimeout(function(){
 function init(){
   // Создание карты.
   var myMap = new ymaps.Map("map", {
-    center: [47.233497, 39.691180],
+    center: [55.738024, 37.510322],
     zoom: 18,
     controls: ['routeButtonControl', 'zoomControl']
   }, {
@@ -297,8 +292,19 @@ function init(){
   ),
 
   myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Repair Design',
-        balloonContent: 'Пн - Пт: с 9:00 до 18:00'
+        hintContent: 'Балашиха Хлеб',
+        balloonContentHeader: '',
+        balloonContentBody: 
+        '<div class="my-balloon">'+
+        '<div class="my-balloon__icon"><img src="../img/footer/balloon-icon.png" alt=""></div>'+
+        '<div class="my-balloon__discription">'+
+          '<b>МЫ&nbsp;НАХОДИМСЯ:</b><br>'+
+          'г.Москва,&nbsp;ул.Неверовского,&nbsp;д.9<br>'+
+          'Телефон:&nbsp;+7(495)444-44-44<br>'+
+          'E-mail:&nbsp;<a href="mailto:info@ied.ru">info@ied.ru</a>'+
+        '</div>'+
+      '</div>',
+        balloonPanelMaxMapArea: 0
     }, {
         // Опции.
         // Необходимо указать данный тип макета.
@@ -317,7 +323,7 @@ function init(){
 
   // Добавим элемент управления (построитель маршрута) в левый угол карты
   // и зададим начальную и конечную точки маршрута.
-  myMap.controls.add('routeButtonControl', {
+  /* myMap.controls.add('routeButtonControl', {
     size: "large",
     float: "left",
     floatIndex: 1000,
@@ -327,7 +333,7 @@ function init(){
         fromEnabled: true,
         to: [47.233497, 39.691180],
         type: "auto"      
-  });
+  }); */
 }
 
 // Видео с youtube
