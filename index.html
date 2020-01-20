@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="ru">
   <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="sharov maxim">
@@ -12,6 +14,26 @@
   </head>
   <body>
     
+    <!-- Yandex.Metrika counter -->
+    <script>
+      setTimeout(() => {
+
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+          ym(57097600, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+        });
+
+      }, 3000)
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/57097600" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <!-- HEADER -->
     <header class="header">
       <div class="container">
@@ -19,7 +41,7 @@
           <a href="index.html" class="menu__logo logo logo-link">
             <img src="img/menu/logo.png" alt="" class="menu__logo__icon">
             <div class="menu__logo__text">
-              <img src="img/menu/logo-text.png" class="menu__logo__text__title" alt="Балашиха хлеб"></img>
+              <img src="img/menu/logo-text.png" class="menu__logo__text__title" alt="Балашиха хлеб">
               <h2 class="menu__logo__text__subtitle">хлебобулочные и кондитерские изделия</h2>
             </div>
           </a>
@@ -31,7 +53,7 @@
               <div class="menu__contacts__call-me">
                 <img src="img/menu/phone.svg" alt="" class="menu__contacts__call-me__phone">
                 <img src="img/menu/arrow_right.svg" alt="" class="menu__contacts__call-me__arrow">
-                <button class="menu__contacts__call-me__button call-me__button"><span class="menu__contacts__call-me__button__text">Перезвоните мне!</span></button>
+                <button class="menu__contacts__call-me__button call-me__button">Перезвоните мне!</button>
               </div>
             </div>
           </div>
@@ -91,15 +113,15 @@
                 </div>            
                 <!-- /.form-container__title-block -->
 
-                <form action="#" id="hero-form" class="form hero-form">
+                <form action="send.php" method="POST" id="hero-form" onsubmit="ym(57097600, 'reachGoal', 'button'); return true;" class="form hero-form">
 
                   <div class="form__inputs-block">
-                    <input type="text" name="userName" class="form__input form__input-name" id="hero-user-name" placeholder="Ваше имя">
-                    <input type="email" name="userEmail" class="form__input form__input-email" id="hero-user-email" placeholder="Ваш e-mail">
-                    <input type="tel" name="userPhone" class="form__input form__input-phone" id="hero-user-phone" placeholder="Ваш номер телефона">
+                    <div class="input-wrap"><input type="text" name="userName" class="form__input form__input-name" id="hero-user-name" placeholder="Ваше имя"></div>
+                    <div class="input-wrap"><input type="email" name="userEmail" class="form__input form__input-email" id="hero-user-email" placeholder="Ваш e-mail"></div>
+                    <div class="input-wrap"><input type="tel" name="userPhone" class="form__input form__input-phone" id="hero-user-phone" placeholder="Ваш номер телефона"></div>
                   </div>
 
-                  <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить КП!</span></button>
+                  <button class="form__button button"><span class="form__button__text">Получить КП!</span></button>
 
                 </form>
                 <!-- /.form -->
@@ -188,7 +210,7 @@
             </div>
             <!-- /.main-advant__video -->
           </div>
-          <!-- /.main-advant__content__video--for-shadow -->
+          <!-- /.main-advant__content__video- -for-shadow -->
 
 
         </div>
@@ -484,15 +506,15 @@
           <!-- FORM CONTAINER -->
           <div class="form-container personal-offer__form-container">
 
-            <form action="#" method="POST" id="personal-offer-form"  class="form personal-offer__form-container__form">
+            <form action="send.php" method="POST" id="personal-offer-form"  onsubmit="ym(57097600, 'reachGoal', 'button'); return true;" class="form personal-offer__form-container__form">
 
               <div class="form__inputs-block personal-offer__form-container__form__inputs-block">
-                <input type="text" name="userName" class="form__input form__input-name" id="personal-offer-user-name" placeholder="Ваше имя">
-                <input type="email" name="userEmail" class="form__input form__input-email" id="personal-offer-user-email" placeholder="Ваш e-mail">
-                <input type="tel" name="userPhone" class="form__input form__input-phone" id="personal-offer-user-phone" placeholder="Ваш номер телефона">
+                <div class="input-wrap"><input type="text" name="userName" class="form__input form__input-name" id="personal-offer-user-name" placeholder="Ваше имя"></div>            
+                <div class="input-wrap"><input type="email" name="userEmail" class="form__input form__input-email" id="personal-offer-user-email" placeholder="Ваш e-mail"></div>
+                <div class="input-wrap"><input type="tel" name="userPhone" class="form__input form__input-phone" id="personal-offer-user-phone" placeholder="Ваш номер телефона"></div>
               </div>
 
-              <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить сейчас!</span></button>
+              <button class="form__button button"><span class="form__button__text">Получить сейчас!</span></button>
 
             </form>
             <!-- /.form -->
@@ -550,6 +572,8 @@
             </script> -->
 
           </div>
+          <div><img src="img/footer/social-plug.png" alt=""></div>
+          <div>© Glo Academy</div>
 
         </div>
       </div>
@@ -575,15 +599,15 @@
               </div>            
               <!-- /.form-container__title-block -->
 
-              <form action="send.php" method="POST" id="modal-form"  class="form">
+              <form action="send.php" method="POST" id="modal-form"  onsubmit="ym(57097600, 'reachGoal', 'button'); return true;" class="form">
 
                 <div class="form__inputs-block">
-                  <input type="text" name="userName" class="form__input form__input-name" id="modal-user-name" placeholder="Ваше имя">
-                  <input type="email" name="userEmail" class="form__input form__input-email" id="modal-user-email" placeholder="Ваш e-mail">
-                  <input type="tel" name="userPhone" class="form__input form__input-phone" id="modal-user-phone" placeholder="Ваш номер телефона">
+                  <div class="input-wrap"><input type="text" name="userName" class="form__input form__input-name" id="modal-user-name" placeholder="Ваше имя"></div>                  
+                  <div class="input-wrap"><input type="email" name="userEmail" class="form__input form__input-email" id="modal-user-email" placeholder="Ваш e-mail"></div>
+                  <div class="input-wrap"><input type="tel" name="userPhone" class="form__input form__input-phone" id="modal-user-phone" placeholder="Ваш номер телефона"></div>
                 </div>
 
-                <button class="form__button button"><div class="form__button--shadow"></div><span class="form__button__text">Получить КП!</span></button>
+                <button class="form__button button"><span class="form__button__text">Получить КП!</span></button>
 
               </form>
               <!-- /.form -->

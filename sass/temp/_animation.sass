@@ -1,0 +1,45 @@
+.hero
+  &__content
+    &__items
+      &__item
+        animation-name: rotation
+        animation-duration: 1s
+        animation-iteration-count: infinite
+        animation-timing-function: linear
+        &__text
+          animation-name: back-rotation
+          animation-duration: 1s
+          animation-iteration-count: infinite
+          animation-timing-function: linear
+  
+@keyframes rotation
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+@keyframes back-rotation
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(-360deg)
+
+.section
+  &-title
+    animation-name: pulse
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+
+@keyframes pulse
+  0%
+    font-size: 2.2757rem
+  10%
+    font-size: 2.4rem
+  40%
+    font-size: 2.2757rem
+  60%
+    font-size: 2.2757rem
+  80%
+    font-size: 2.2757rem
+  100%
+    font-size: 2.2757rem
